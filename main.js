@@ -39,7 +39,7 @@ Actor.main(async () => {
     }
 
     // --- Grab Apify Proxy to bypass YouTube Bot Detection ---
-    const proxyUrl = `http://auto:${process.env.APIFY_PROXY_PASSWORD}@proxy.apify.com:8000`;
+    const proxyUrl = `http://groups-RESIDENTIAL:${process.env.APIFY_PROXY_PASSWORD}@proxy.apify.com:8000`;
 
     // --- Download only the clip segment using yt-dlp + ffmpeg postprocessor ---
     // --download-sections downloads only the specified time range (server-side)
