@@ -1,0 +1,32 @@
+{
+    "title": "YT Clip Downloader Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "url": {
+            "title": "YouTube URL",
+            "type": "string",
+            "description": "Full YouTube video URL",
+            "editor": "textfield"
+        },
+        "startSec": {
+            "title": "Start Time (seconds)",
+            "type": "integer",
+            "description": "Clip start time in seconds",
+            "editor": "number"
+        },
+        "endSec": {
+            "title": "End Time (seconds)",
+            "type": "integer",
+            "description": "Clip end time in seconds",
+            "editor": "number"
+        },
+        "clipName": {
+            "title": "Clip Name",
+            "type": "string",
+            "description": "Output filename (no extension). Used as the key-value store record key.",
+            "editor": "textfield"
+        }
+    },
+    "required": ["url", "startSec", "endSec"]
+}

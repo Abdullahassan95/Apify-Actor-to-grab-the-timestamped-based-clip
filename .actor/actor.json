@@ -1,0 +1,11 @@
+{
+    "actorSpecification": 1,
+    "name": "yt-clip-downloader",
+    "title": "YouTube Clip Downloader",
+    "description": "Downloads a specific time segment from a YouTube video without downloading the full file.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "environmentVariables": {},
+    "dockerfile": "./Dockerfile",
+    "input": "./.actor/input_schema.json"
+}
