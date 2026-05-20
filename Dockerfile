@@ -1,5 +1,5 @@
-# Use Apify's Node.js base image (includes ffmpeg)
-FROM apify/actor-node:18
+# Use a Debian-based Node.js image that supports apt-get
+FROM node:18-bullseye-slim
 
 # Install ffmpeg and python3-pip for yt-dlp
 RUN apt-get update && apt-get install -y \
