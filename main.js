@@ -38,12 +38,16 @@ Actor.main(async () => {
         execSync('pip install yt-dlp --quiet', { stdio: 'inherit' });
     }
 
+    // --- Grab Apify Proxy to bypass YouTube Bot Detection ---
+    const proxyUrl = `http://auto:${process.env.APIFY_PROXY_PASSWORD}@proxy.apify.com:8000`;
+
     // --- Download only the clip segment using yt-dlp + ffmpeg postprocessor ---
     // --download-sections downloads only the specified time range (server-side)
     // No full video is downloaded
     const ytDlpCmd = [
         'yt-dlp',
         `"${url}"`,
+        `--proxy "${proxyUrl}"`,
         `--download-sections "*${startSec}-${endSec}"`,
         '--force-keyframes-at-cuts',         // accurate cuts
         '-f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"',
