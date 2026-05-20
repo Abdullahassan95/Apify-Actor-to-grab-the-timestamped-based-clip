@@ -1,12 +1,12 @@
-# Use a Debian-based Node.js image that supports apt-get
-FROM node:18-bullseye-slim
+# Use a newer Debian-based Node image (includes Python 3.11)
+FROM node:20-bookworm-slim
 
 # Install ffmpeg and python3-pip for yt-dlp
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     python3-pip \
     python3 \
-    && pip3 install yt-dlp \
+    && pip3 install yt-dlp --break-system-packages \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
