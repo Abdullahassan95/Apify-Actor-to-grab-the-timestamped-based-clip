@@ -1,0 +1,16 @@
+{
+    "name": "yt-clip-downloader",
+    "version": "1.0.0",
+    "description": "Downloads a time-segmented clip from a YouTube video using yt-dlp. No full video download.",
+    "type": "module",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "dependencies": {
+        "apify": "^3.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
